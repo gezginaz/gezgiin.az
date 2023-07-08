@@ -26,7 +26,10 @@ public class IcpPlaceResponse {
     private String opens;
     private String closes;
     private String coordinates;
+    private String contact;
     private List<String> pictures;
+    private Boolean family;
+
 
     // Getters and Setters
     public Long getId() {
@@ -149,4 +152,19 @@ public class IcpPlaceResponse {
         this.coordinates = coordinates;
     }
 
+    public String getContact() {
+        return contact;
+    }
+
+    public void setContact(String contact) {
+        this.contact = contact;
+    }
+
+    public Boolean getFamily() {
+        return family;
+    }
+
+    public void setFamily(Boolean family) {
+        this.family = family;
+    }
 }

@@ -24,6 +24,7 @@ public class IcpPlaceRequest {
     private Boolean openAir;
     private String opens;
     private String closes;
+    private Boolean family;
 
 
     // Getters and Setters
@@ -121,5 +122,13 @@ public class IcpPlaceRequest {
 
     public void setContact(String contact) {
         this.contact = contact;
+    }
+
+    public Boolean getFamily() {
+        return family;
+    }
+
+    public void setFamily(Boolean family) {
+        this.family = family;
     }
 }

@@ -12,7 +12,7 @@ public class Place extends BaseModel {
 
     @Column(nullable = false)
     private String name;
-    @Column(nullable = true, length = 400)
+    @Column(nullable = false, length = 500)
     private String mainPictureUrl;
     @Column(nullable = false)
     private String address;
@@ -31,6 +31,8 @@ public class Place extends BaseModel {
 
     private String coordinates;
 
+    private Boolean family;
+
     private String contact;
 
     private Boolean openAir;
@@ -47,10 +49,7 @@ public class Place extends BaseModel {
     // Constructors
     public Place() {}
 
-    public Place(Long id, Date createdAt, Date updatedAt, String name, String mainPictureUrl, String address,
-                 String description, String type, String aura, String theme, String architecture, String region,
-                 String coordinates, String contact, Boolean openAir, String opens, String closes, Boolean isActive,
-                 Set<PlacePicture> placePictures) {
+    public Place(Long id, Date createdAt, Date updatedAt, String name, String mainPictureUrl, String address, String description, String type, String aura, String theme, String architecture, String region, String coordinates, Boolean family, String contact, Boolean openAir, String opens, String closes, Boolean isActive, Set<PlacePicture> placePictures) {
         super(id, createdAt, updatedAt);
         this.name = name;
         this.mainPictureUrl = mainPictureUrl;
@@ -62,6 +61,7 @@ public class Place extends BaseModel {
         this.architecture = architecture;
         this.region = region;
         this.coordinates = coordinates;
+        this.family = family;
         this.contact = contact;
         this.openAir = openAir;
         this.opens = opens;
@@ -70,9 +70,7 @@ public class Place extends BaseModel {
         this.placePictures = placePictures;
     }
 
-    public Place(String name, String mainPictureUrl, String address, String description, String type, String aura,
-                 String theme, String architecture, String region, String coordinates, String contact, Boolean openAir,
-                 String opens, String closes, Boolean isActive, Set<PlacePicture> placePictures) {
+    public Place(String name, String mainPictureUrl, String address, String description, String type, String aura, String theme, String architecture, String region, String coordinates, Boolean family, String contact, Boolean openAir, String opens, String closes, Boolean isActive, Set<PlacePicture> placePictures) {
         this.name = name;
         this.mainPictureUrl = mainPictureUrl;
         this.address = address;
@@ -83,6 +81,7 @@ public class Place extends BaseModel {
         this.architecture = architecture;
         this.region = region;
         this.coordinates = coordinates;
+        this.family = family;
         this.contact = contact;
         this.openAir = openAir;
         this.opens = opens;
@@ -219,4 +218,13 @@ public class Place extends BaseModel {
     public void setCoordinates(String coordinates) {
         this.coordinates = coordinates;
     }
+
+    public Boolean getFamily() {
+        return family;
+    }
+
+    public void setFamily(Boolean family) {
+        this.family = family;
+    }
+
 }

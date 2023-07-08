@@ -22,11 +22,13 @@ public interface PlaceMapper {
     Place getPlaceEntity(IcpPlaceRequest payload);
 
     @Mapping(target = "active", expression = "java(true)")
+    @Mapping(source = "contact", target = "contact")
     Place getPlaceFromWithJsonRequest (IcpPlacerRequestWithImage request);
 
 
     @Mapping(source = "id", target = "id")
     @Mapping(source = "coordinates", target = "coordinates")
+    @Mapping(source = "contact", target = "contact")
     IcpPlaceResponse getPlaceResponse(Place place);
 
     void TransferRequestToPlace(IcpPlaceRequest payload, @MappingTarget Place place);
