@@ -158,4 +158,5 @@ public class PlaceServiceImpl implements PlaceService {
                 .pictureUrl(mainFilePath+image.getOriginalFilename())
                 .build();
     }
+    // Salam
 }

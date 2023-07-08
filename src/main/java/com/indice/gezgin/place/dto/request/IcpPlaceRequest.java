@@ -71,6 +71,7 @@ public class IcpPlaceRequest {
     public String getTheme() {
         return theme;
     }
+    //Salam
 
     public void setTheme(String theme) {
         this.theme = theme;

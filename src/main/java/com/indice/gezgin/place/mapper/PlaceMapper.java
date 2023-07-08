@@ -32,5 +32,5 @@ public interface PlaceMapper {
     IcpPlaceResponse getPlaceResponse(Place place);
 
     void TransferRequestToPlace(IcpPlaceRequest payload, @MappingTarget Place place);
-
+    //Salam
 }

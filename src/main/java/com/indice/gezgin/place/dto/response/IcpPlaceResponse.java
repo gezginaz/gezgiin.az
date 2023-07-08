@@ -12,6 +12,7 @@ import java.util.List;
 public class IcpPlaceResponse {
 
     private Long id;
+    //Salam
 
     private String name;
     private String mainPictureUrl;
